@@ -1,6 +1,7 @@
 package com.app.servico;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +18,7 @@ public class HeroiService {
 	private HeroiRepository repository;
 	
 	public List<Heroi> listar() {
-		return this.repository.findAll();
+		return this.repository.findAll().stream().filter(h -> h.isAtivo()).collect(Collectors.toList());
 	}
 
 	@Transactional(propagation = Propagation.REQUIRED)
