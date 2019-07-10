@@ -12,6 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Heroi {
@@ -32,6 +34,7 @@ public class Heroi {
 	private Universo universo;
 	
 	@Column(name = "data_cadastro")
+	@Temporal(TemporalType.DATE)
 	private Date dataCadastro = new Date();
 
 	private boolean ativo = true;
@@ -66,6 +69,14 @@ public class Heroi {
 
 	public void setUniverso(Universo universo) {
 		this.universo = universo;
+	}
+	
+	public Date getDataCadastro() {
+		return dataCadastro;
+	}
+	
+	public void setDataCadastro(Date dataCadastro) {
+		this.dataCadastro = dataCadastro;
 	}
 
 	@Override
