@@ -55,7 +55,7 @@ public class EyHeroesApplication {
         	h2.setPoderes(Arrays.asList(p4, p5));
         	
         	
-        	heroiRepository.saveAll(Arrays.asList(h1, h2));
+        	heroiRepository.saveAll(Arrays.asList(h1, h2, h3));
         };
     }
 }
