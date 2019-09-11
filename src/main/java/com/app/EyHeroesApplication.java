@@ -32,11 +32,15 @@ public class EyHeroesApplication {
         	Poder p3 = new Poder("Velocidade");
         	Poder p4 = new Poder("Magia");
         	Poder p5 = new Poder("Mutação");
+        	Poder p6 = new Poder("Deus do Trovão");
+        	
         	poderRepository.saveAll(Arrays.asList(p1,p2,p3));
         	
         	Universo u1 = new Universo("EY Commics");
         	Universo u2 = new Universo("Trainee Commics");
         	Universo u3 = new Universo("Outros");
+        	Universo u4 = new Universo("Mkt Commics");
+        	
         	universoRepository.saveAll(Arrays.asList(u1,u2,u3));
         	
         	Heroi h1 = new Heroi();
@@ -54,8 +58,12 @@ public class EyHeroesApplication {
         	h2.setUniverso(u2);
         	h2.setPoderes(Arrays.asList(p4, p5));
         	
+        	Heroi h4 = new Heroi();
+        	h2.setNome("Raiden");
+        	h2.setUniverso(u4);
+        	h2.setPoderes(Arrays.asList(p6));
         	
-        	heroiRepository.saveAll(Arrays.asList(h1, h2, h3));
+        	heroiRepository.saveAll(Arrays.asList(h1, h2, h3, h4));
         };
     }
 }
