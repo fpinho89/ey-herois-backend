@@ -37,6 +37,7 @@ public class EyHeroesApplication {
         	Universo u1 = new Universo("EY Commics");
         	Universo u2 = new Universo("Trainee Commics");
         	Universo u3 = new Universo("Outros");
+        	Universo u4 = new Universo("Mkt Commics");
         	universoRepository.saveAll(Arrays.asList(u1,u2,u3));
         	
         	Heroi h1 = new Heroi();
@@ -51,7 +52,7 @@ public class EyHeroesApplication {
         	
         	Heroi h3 = new Heroi();
         	h2.setNome("Rain");
-        	h2.setUniverso(u2);
+        	h2.setUniverso(u4);
         	h2.setPoderes(Arrays.asList(p4, p5));
         	
         	
