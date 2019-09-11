@@ -31,6 +31,7 @@ public class EyHeroesApplication {
         	Poder p2 = new Poder("Visão Nortuna");
         	Poder p3 = new Poder("Velocidade");
         	Poder p4 = new Poder("Magia");
+        	Poder p5 = new Poder("Mutação");
         	poderRepository.saveAll(Arrays.asList(p1,p2,p3));
         	
         	Universo u1 = new Universo("EY Commics");
@@ -51,7 +52,7 @@ public class EyHeroesApplication {
         	Heroi h3 = new Heroi();
         	h2.setNome("Rain");
         	h2.setUniverso(u2);
-        	h2.setPoderes(Arrays.asList(p4));
+        	h2.setPoderes(Arrays.asList(p4, p5));
         	
         	
         	heroiRepository.saveAll(Arrays.asList(h1, h2));
